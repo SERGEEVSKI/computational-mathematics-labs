@@ -81,6 +81,12 @@ void norma(float a[3][3], float b[3])
 	printf("||B||inf = max(|%.2f| ; |%.2f| ; |%.2f|) = %.2f\n", b[0], b[1], b[2], r);
 }
 
+void firststep(float b[3])
+{
+	printf("\n\t|0|\n  X0 =\t|0|\n\t|0|\n\n");
+	printf("\t|%.2f|\n  X1 =\t|%.2f|\n\t|%.2f|\n", b[0], b[1], b[2]);
+}
+
 int main()
 {
 	float a[3][3], b[3];
@@ -100,6 +106,8 @@ int main()
 	print(a, b);
 
 	norma(a, b);
+
+	firststep(b);
 
 	return 0;
 }
